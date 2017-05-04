@@ -1,0 +1,38 @@
+.hero-banner {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.blog-post-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lifestyle-feature-post, .travel-feature-post, .advice-feature-post {
+    width: 30%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+}
+
+.feature-picture-container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 3px rgba(100, 100, 100, 0.8);
+    img {
+        display: block;
+        opacity: 0.75;
+    }
+}
+
+.feature-category-title {
+    @include absolute-center-text;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+}

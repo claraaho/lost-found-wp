@@ -22,6 +22,11 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
+					<div class="homepage-logo">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<i class="fa fa-home fa-2x" aria-hidden="true"></i>
+						</a>
+					</div>
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
@@ -30,6 +35,15 @@
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
+
+				<div class="social-icon-nav">
+					<div class="social-media-bar">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+						<i class="fa fa-instagram" aria-hidden="true"></i>
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</div>
+					<?php get_search_form(); ?>
+				</div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

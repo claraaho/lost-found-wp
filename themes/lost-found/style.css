@@ -484,6 +484,115 @@ a {
   text-align: right;
   width: 50%; }
 
+.site-header {
+  border: 1px solid lightgrey;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 75px; }
+
+.site-branding {
+  width: 10%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.homepage-logo a {
+  color: black; }
+
+.menu-item {
+  padding-right: 1.5rem;
+  text-transform: uppercase;
+  color: black; }
+  .menu-item a {
+    color: black; }
+
+.menu-item-type-post_type .sub-menu {
+  background: white;
+  padding: 0.5rem; }
+  .menu-item-type-post_type .sub-menu li {
+    padding-bottom: 1rem; }
+  .menu-item-type-post_type .sub-menu li:last-child {
+    padding: 0; }
+
+.social-icon-nav {
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.social-media-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 95px; }
+
+.search-form {
+  width: 225px; }
+  .search-form fieldset {
+    padding: 0;
+    margin: 0;
+    border: none; }
+
+.search-submit {
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  outline: none; }
+
+.site-footer {
+  border: 1px solid lightgrey;
+  height: 100px; }
+
+.hero-banner {
+  text-align: center;
+  text-transform: uppercase; }
+
+.blog-post-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.lifestyle-feature-post, .travel-feature-post, .advice-feature-post {
+  width: 30%;
+  height: 400px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  text-align: center; }
+  .lifestyle-feature-post p, .travel-feature-post p, .advice-feature-post p {
+    margin: 0; }
+
+.feature-picture-container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 3px rgba(100, 100, 100, 0.8); }
+  .feature-picture-container img {
+    display: block;
+    opacity: 0.75; }
+
+.feature-category-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-transform: uppercase;
+  margin: 0;
+  color: white; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
