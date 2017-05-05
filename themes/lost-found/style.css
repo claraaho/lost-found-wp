@@ -523,8 +523,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   width: 30%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .social-media-bar {
   display: -ms-flexbox;
@@ -533,14 +533,17 @@ a {
       align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 95px; }
+  width: 95px;
+  margin-right: 0.5rem; }
 
-.search-form {
-  width: 225px; }
-  .search-form fieldset {
-    padding: 0;
-    margin: 0;
-    border: none; }
+.search-form fieldset {
+  padding: 0;
+  margin: 0;
+  border: none; }
+  .search-form fieldset .search-field {
+    outline: none;
+    border: none;
+    display: none; }
 
 .search-submit {
   border: none;
@@ -553,28 +556,54 @@ a {
   border: 1px solid lightgrey;
   height: 100px; }
 
+.about-picture {
+  width: 225px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 3rem; }
+  @media only screen and (min-width: 600px) {
+    .about-picture {
+      width: 335px;
+      height: 330px; } }
+  @media only screen and (min-width: 1024px) {
+    .about-picture {
+      width: 455px;
+      height: 450px; } }
+
+@media only screen and (min-width: 1024px) {
+  .about-content {
+    padding: 0 6rem; } }
+
 .hero-banner {
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  height: 15rem;
+  border: 1px dotted lightgrey;
+  margin-bottom: 2rem; }
 
-.blog-post-container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+@media only screen and (min-width: 1024px) {
+  .blog-post-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
 
 .lifestyle-feature-post, .travel-feature-post, .advice-feature-post {
-  width: 30%;
-  height: 400px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-direction: column;
-      flex-direction: column;
   text-align: center; }
-  .lifestyle-feature-post p, .travel-feature-post p, .advice-feature-post p {
-    margin: 0; }
+  @media only screen and (min-width: 1024px) {
+    .lifestyle-feature-post, .travel-feature-post, .advice-feature-post {
+      width: 30%;
+      height: 400px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .lifestyle-feature-post p, .travel-feature-post p, .advice-feature-post p {
+        margin: 0; } }
 
 .feature-picture-container {
   position: relative;
@@ -582,7 +611,8 @@ a {
   text-shadow: 2px 2px 3px rgba(100, 100, 100, 0.8); }
   .feature-picture-container img {
     display: block;
-    opacity: 0.75; }
+    opacity: 0.75;
+    width: 100%; }
 
 .feature-category-title {
   position: absolute;
@@ -592,6 +622,17 @@ a {
   text-transform: uppercase;
   margin: 0;
   color: white; }
+
+@media only screen and (min-width: 1024px) {
+  .page-template-about .jr-insta-thumb {
+    padding: 0 6rem; } }
+
+@media only screen and (min-width: 600px) {
+  .jr_col_10 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -700,6 +741,15 @@ a {
 
 .bypostauthor {
   display: block; }
+
+.site-content {
+  padding: 2rem 1rem; }
+  @media only screen and (min-width: 600px) {
+    .site-content {
+      padding: 2rem 3rem; } }
+  @media only screen and (min-width: 1024px) {
+    .site-content {
+      padding: 2rem; } }
 
 /*--------------------------------------------------------------
 # Media

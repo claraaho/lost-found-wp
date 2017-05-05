@@ -1,0 +1,22 @@
+.about-picture {
+    width: 225px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    @include media($tablet) {
+        width: 335px;
+        height: 330px;
+    }
+    @include media($desktop) {
+        width: 455px;
+        height: 450px;
+    }
+}
+
+.about-content {
+    @include media($desktop) {
+        padding: 0 6rem;
+    }
+}

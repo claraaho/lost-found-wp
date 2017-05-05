@@ -47,3 +47,13 @@
 .bypostauthor {
 	display: block;
 }
+
+.site-content {
+	padding: 2rem 1rem;
+	@include media($tablet) {
+		padding: 2rem 3rem;
+	}
+	@include media($desktop) {
+		padding: 2rem;
+	}
+}

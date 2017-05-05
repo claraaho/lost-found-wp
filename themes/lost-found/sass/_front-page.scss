@@ -1,22 +1,29 @@
 .hero-banner {
     text-align: center;
     text-transform: uppercase;
+    height: 15rem;
+    border: 1px dotted lightgrey;
+    margin-bottom: 2rem;
 }
 
 .blog-post-container {
-    display: flex;
-    justify-content: space-around;
+    @include media($desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .lifestyle-feature-post, .travel-feature-post, .advice-feature-post {
-    width: 30%;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     text-align: center;
-    p {
-        margin: 0;
+    @include media($desktop) {
+        width: 30%;
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -27,6 +34,7 @@
     img {
         display: block;
         opacity: 0.75;
+        width: 100%;
     }
 }
 
@@ -35,4 +43,17 @@
     text-transform: uppercase;
     margin: 0;
     color: white;
+}
+
+.page-template-about .jr-insta-thumb {
+    @include media($desktop) {
+        padding: 0 6rem;
+    }
+}
+
+.jr_col_10 {
+    @include media($tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
 }

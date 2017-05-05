@@ -38,7 +38,7 @@ get_header(); ?>
 							<h2 class="feature-category-title">Travel</h2>
 						</div>
                     	<p><a class="travel-title" href='<?php echo get_permalink($travel);?>'><?php echo get_the_title($travel); ?></a></p>
-                    	<a href='<?php echo get_permalink($travel);?>'>Read More</a>
+                    	<p><a href='<?php echo get_permalink($travel);?>'>Read More</a></p>
             		<?php endforeach; wp_reset_postdata(); ?>
 				</div>
 
@@ -50,14 +50,22 @@ get_header(); ?>
 							<h2 class="feature-category-title">Advice</h2>
 						</div>
                     	<p><a class="advice-title" href='<?php echo get_permalink($advice);?>'><?php echo get_the_title($advice); ?></a></p>
-                    	<a href='<?php echo get_permalink($advice);?>'>Read More</a>
+                    	<p><a href='<?php echo get_permalink($advice);?>'>Read More</a></p>
             		<?php endforeach; wp_reset_postdata(); ?>
 				</div>
 
 			</div><!-- .blog-post-container -->
 
+			<!-- MOST RECENT BLOG ENTRY -->
+			<div class="recent-blog-container">
+				<?php $entries = wp_get_recent_posts(array('post_type'=>'blog-entry'));?>
+				<?php foreach ( $entries as $entry ):
+					echo '<a href="' . get_permalink($entry["ID"]) . '" title="Look '.esc_attr($entry["post_title"]).'" >' .   $entry["post_title"].'</a>';
+            	endforeach; ?>
+			</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php echo do_shortcode('[jr_instagram id="2"]'); ?>
 <?php get_footer(); ?>
