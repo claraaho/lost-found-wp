@@ -50,6 +50,48 @@
     margin-right: 0.5rem;
 }
 
+.menu-social-menu-container {
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.social-icon-menu-item {
+    position: relative;
+    width: 15px;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid black;
+    a {
+        color: transparent;
+    }
+    &:before {
+        position: absolute;
+        font-family: FontAwesome;
+        font-size: 1.2rem;
+    }
+}
+
+.menu-icon-facebook:before {
+    content: "\f09a";
+    left: 6px;
+}
+
+.menu-icon-instagram:before {
+    content: "\f16d";
+    left: 4px;
+    top: -1px;
+}
+
+.menu-icon-twitter:before {
+    content: "\f099";
+    left: 4px;
+}
+
 .search-form {
     fieldset {
         padding: 0;

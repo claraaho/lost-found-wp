@@ -29,12 +29,13 @@
 
 .feature-picture-container {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
     text-shadow: 2px 2px 3px rgba(100, 100, 100, 0.8);
     img {
         display: block;
-        opacity: 0.75;
+        filter: brightness(85%);
         width: 100%;
+        height: 270px;
+        object-fit: cover;
     }
 }
 

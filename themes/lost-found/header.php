@@ -38,9 +38,10 @@
 
 				<div class="social-icon-nav">
 					<div class="social-media-bar">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-						<i class="fa fa-instagram" aria-hidden="true"></i>
-						<i class="fa fa-twitter" aria-hidden="true"></i>
+						<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>
+						<!--<i class="fa fa-facebook" aria-hidden="true"></i>-->
+						<!--<i class="fa fa-instagram" aria-hidden="true"></i>-->
+						<!--<i class="fa fa-twitter" aria-hidden="true"></i>-->
 					</div>
 					<?php get_search_form(); ?>
 				</div>

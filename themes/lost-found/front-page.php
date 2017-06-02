@@ -18,7 +18,7 @@ get_header(); ?>
 			<!-- BLOG POSTS -->
 			<div class="blog-post-container">
 				
-				<?php $lifestyles = get_posts(array( 'post_type' => 'lifestyle', 'order' => 'ASC' )); ?>
+				<?php $lifestyles = get_posts(array( 'posts_per_page'=> 1, 'post_type' => 'lifestyle', 'order' => 'DSC' )); ?>
 				<div class="lifestyle-feature-post">
 					<?php foreach ( $lifestyles as $lifestyle ): ?>
                     	<div class="feature-picture-container">
@@ -30,7 +30,7 @@ get_header(); ?>
             		<?php endforeach; wp_reset_postdata(); ?>
 				</div>
 
-				<?php $travels = get_posts(array( 'post_type' => 'travel', 'order' => 'ASC' )); ?>
+				<?php $travels = get_posts(array( 'posts_per_page'=> 1, 'post_type' => 'travel', 'order' => 'DSC' )); ?>
 				<div class="travel-feature-post">
 					<?php foreach ( $travels as $travel ): ?>
 						<div class="feature-picture-container">
@@ -42,7 +42,7 @@ get_header(); ?>
             		<?php endforeach; wp_reset_postdata(); ?>
 				</div>
 
-				<?php $advices = get_posts(array( 'post_type' => 'advice', 'order' => 'ASC' )); ?>
+				<?php $advices = get_posts(array( 'posts_per_page'=> 1, 'post_type' => 'advice', 'order' => 'DSC' )); ?>
 				<div class="advice-feature-post">
 					<?php foreach ( $advices as $advice ): ?>
 						<div class="feature-picture-container">
