@@ -2,7 +2,9 @@
     border: 1px solid lightgrey;
     display: flex;
     align-items: center;
-    height: 75px;
+    position: fixed;
+    width: 100%;
+    background: #FFFFFF;
 }
 
 .site-branding {
@@ -65,31 +67,38 @@
     width: 15px;
     height: 25px;
     overflow: hidden;
-    border: 1px solid black;
+    // border: 1px solid black;
     a {
         color: transparent;
+        &:before {
+            font-family: FontAwesome;
+            color: black;
+            font-size: 1.2rem;
+            position: absolute;
+        }
     }
-    &:before {
-        position: absolute;
-        font-family: FontAwesome;
-        font-size: 1.2rem;
+}
+
+.menu-icon-facebook {
+    a:before {
+        content: "\f09a";
+        left: 6px;
     }
 }
 
-.menu-icon-facebook:before {
-    content: "\f09a";
-    left: 6px;
+.menu-icon-instagram {
+    a:before {
+        content: "\f16d";
+        left: 4px;
+        top: -1px;
+    }
 }
 
-.menu-icon-instagram:before {
-    content: "\f16d";
-    left: 4px;
-    top: -1px;
-}
-
-.menu-icon-twitter:before {
-    content: "\f099";
-    left: 4px;
+.menu-icon-twitter {
+    a:before {
+        content: "\f099";
+        left: 4px;
+    }
 }
 
 .search-form {
