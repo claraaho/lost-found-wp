@@ -16,7 +16,15 @@
 }
 
 .about-content {
+    margin-bottom: 3rem;
     @include media($desktop) {
         padding: 0 6rem;
     }
 }
+
+.page-template-about #sb_instagram {
+    @include media($desktop) {
+        padding: 0 6rem;
+    }
+}
+

@@ -9,18 +9,18 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="hero-banner">
+            <div class="hero-banner">
 				<h2>Lost x Found</h2>
 				<h3>with KatexCee</h3>
 			</div>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
+            <div class="blog-content-container">
 			<div class="blog-article-container">
-				<div class="blog-article-wrapper">
+				<div class="blog-article-wrapper">  
 					<?php the_post_thumbnail('full'); ?>
 					<div class="blog-article-content">
-						<h2><?php the_title(); ?></h2>
+                        <h2><?php the_title(); ?></h2>  
 						<?php the_content(); ?>
 					</div>
 				</div>
@@ -35,9 +35,9 @@ get_header(); ?>
 							endfor; ?>
 						</div>
 					<?php endif; ?>
-
 				</div>
 			</div>
+            </div>
 
 			<?php the_post_navigation(); ?>
 

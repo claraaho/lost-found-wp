@@ -9,6 +9,23 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="hero-banner">
+				<h2>Lost x Found</h2>
+				<h3>with KatexCee</h3>
+			</div>
+
+		<?php $new_loop = new WP_Query( array('post_type' => 'travel',
+        'posts_per_page' => 1) ); ?>
+
+		<?php if ( $new_loop->have_posts() ) : ?>
+    		<?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+				<h2><?php the_post_thumbnail('full'); ?></h2>
+			<?php endwhile;?>
+		<?php else: ?>
+		<?php endif; ?>
+		<?php wp_reset_query(); ?>
+
+		<div class='loop-nav-container'><?php lf_infinite_navigation(); ?></div>
 
 		<?php if ( have_posts() ) : ?>
 

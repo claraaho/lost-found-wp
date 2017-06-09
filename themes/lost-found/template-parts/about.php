@@ -9,6 +9,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="hero-banner">
+				<h2>Lost x Found</h2>
+				<h3>with KatexCee</h3>
+			</div>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="about-picture">
@@ -23,5 +27,8 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php echo do_shortcode('[jr_instagram id="2"]'); ?>
+<div class="instagram-container">
+	<h2>Instagram</h2>
+	<?php echo do_shortcode('[instagram-feed]'); ?>
+</div>
 <?php get_footer(); ?>

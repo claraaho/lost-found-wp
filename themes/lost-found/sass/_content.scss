@@ -49,11 +49,22 @@
 }
 
 .site-content {
-	padding: 2rem 1rem;
-	@include media($tablet) {
-		padding: 2rem 3rem;
-	}
-	@include media($desktop) {
-		padding: 2rem;
+	padding: 2rem 0;
+}
+
+.homepage-content-container, .blog-content-container, .comments-area {
+    padding: 0 2rem;
+    @include media($tablet) {
+        padding: 0 3rem;
+    }
+    @include media($desktop) {
+        padding: 0 2rem;
+    }
+}
+
+.instagram-container {
+	text-align: center;
+	h2 {
+		text-transform: uppercase;
 	}
 }

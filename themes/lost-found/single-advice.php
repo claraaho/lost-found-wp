@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="hero-banner">
+            <div class="hero-banner">
 				<h2>Lost x Found</h2>
 				<h3>with KatexCee</h3>
 			</div>

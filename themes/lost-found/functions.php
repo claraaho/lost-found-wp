@@ -90,7 +90,9 @@ function red_starter_scripts() {
 
 	wp_enqueue_script( 'jquery');
 	
-	wp_enqueue_script( 'search_toggle', get_template_directory_uri() . '/js/search-toggle.js', array('jquery'), false, true);
+	wp_enqueue_script( 'lf-search-toggle', get_template_directory_uri() . '/js/search-toggle.js', array('jquery'), false, true);
+
+	wp_enqueue_script( 'lf-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true);
 
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
@@ -101,6 +103,19 @@ function red_starter_scripts() {
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
 /**
+* Adding Wordpress thickbox
+**/
+function include_thickbox_scripts()
+{
+    // include the javascript
+    wp_enqueue_script('thickbox', null, array('jquery'));
+
+    // include the thickbox styles
+    wp_enqueue_style('thickbox.css', '/'.WPINC.'/js/thickbox/thickbox.css', null, '1.0');
+}
+add_action('wp_enqueue_scripts', 'include_thickbox_scripts');
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -109,3 +124,24 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+* Ininite navigation looping
+*/
+function lf_infinite_navigation() {
+	if( get_adjacent_post(false, '', true)  ) { 
+		previous_post_link('%link', 'last');
+	} else { 
+    	$first = new WP_Query('posts_per_page=1&order=DESC&post_type=travel'); $first->the_post();
+    	echo '<a href="' . get_permalink() . '">last</a>';
+  		wp_reset_query();
+	}; 
+    
+	if( get_adjacent_post(false, '', false) ) { 
+		next_post_link('%link', 'next');
+	} else { 
+		$last = new WP_Query('posts_per_page=1&order=ASC&post_type=travel'); $last->the_post();
+    	echo '<a href="' . get_permalink() . '">next</a>';
+    	wp_reset_query();
+	};
+}

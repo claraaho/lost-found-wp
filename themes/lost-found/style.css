@@ -459,7 +459,7 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -484,24 +484,45 @@ a {
   text-align: right;
   width: 50%; }
 
+.main-navigation .menu-click {
+  position: fixed;
+  top: 86px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 29vh;
+  width: 100%; }
+
+.site-header .main-navigation .nav-overlay {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 100%;
+  line-height: 2.5;
+  padding: 0.5rem; }
+
 .site-header {
   border: 1px solid lightgrey;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  position: fixed;
   width: 100%;
-  background: #FFFFFF; }
+  height: 40px;
+  background: #FFFFFF;
+  padding: 0 2rem; }
 
 .site-branding {
-  width: 10%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
+  display: none; }
+  @media only screen and (min-width: 1024px) {
+    .site-branding {
+      width: 10%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; } }
 
 .homepage-logo a {
   color: black; }
@@ -511,7 +532,10 @@ a {
   text-transform: uppercase;
   color: black; }
   .menu-item a {
-    color: black; }
+    color: white; }
+    @media only screen and (min-width: 1024px) {
+      .menu-item a {
+        color: black; } }
 
 .menu-item-type-post_type .sub-menu {
   background: white;
@@ -610,8 +634,14 @@ a {
       width: 455px;
       height: 450px; } }
 
+.about-content {
+  margin-bottom: 3rem; }
+  @media only screen and (min-width: 1024px) {
+    .about-content {
+      padding: 0 6rem; } }
+
 @media only screen and (min-width: 1024px) {
-  .about-content {
+  .page-template-about #sb_instagram {
     padding: 0 6rem; } }
 
 .hero-banner {
@@ -672,6 +702,75 @@ a {
     display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between; } }
+
+@media only screen and (min-width: 1024px) {
+  .blog-article-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
+
+.blog-article-wrapper img {
+  width: 100%; }
+
+@media only screen and (min-width: 1024px) {
+  .blog-article-wrapper {
+    width: 70%; } }
+
+.blog-picture-container {
+  text-align: center; }
+  .blog-picture-container h3 {
+    text-transform: uppercase; }
+  @media only screen and (min-width: 1024px) {
+    .blog-picture-container {
+      width: 25%; } }
+
+.blog-picture-wrapper {
+  max-height: 600px;
+  overflow-y: scroll; }
+  @media only screen and (min-width: 600px) {
+    .blog-picture-wrapper {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      max-width: 506px;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 1024px) {
+    .blog-picture-wrapper {
+      display: block;
+      max-height: none; } }
+
+.blog-picture-wrapper img {
+  width: 250px;
+  height: 250px; }
+
+.comments-title {
+  text-transform: uppercase; }
+
+.comment-body {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1.5rem; }
+  .comment-body a {
+    text-decoration: none;
+    outline: none; }
+
+.avatar {
+  border-radius: 50%; }
+
+.comment-content {
+  padding-left: 1rem; }
+
+.fn {
+  font-style: normal;
+  font-weight: 700; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -782,13 +881,21 @@ a {
   display: block; }
 
 .site-content {
-  padding: 2rem 1rem; }
+  padding: 2rem 0; }
+
+.homepage-content-container, .blog-content-container, .comments-area {
+  padding: 0 2rem; }
   @media only screen and (min-width: 600px) {
-    .site-content {
-      padding: 2rem 3rem; } }
+    .homepage-content-container, .blog-content-container, .comments-area {
+      padding: 0 3rem; } }
   @media only screen and (min-width: 1024px) {
-    .site-content {
-      padding: 2rem; } }
+    .homepage-content-container, .blog-content-container, .comments-area {
+      padding: 0 2rem; } }
+
+.instagram-container {
+  text-align: center; }
+  .instagram-container h2 {
+    text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Media

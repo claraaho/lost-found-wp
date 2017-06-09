@@ -15,6 +15,8 @@ get_header(); ?>
 				<h3>with KatexCee</h3>
 			</div>
 
+			<div class="homepage-content-container">
+
 			<!-- BLOG POSTS -->
 			<div class="blog-post-container">
 				
@@ -64,8 +66,13 @@ get_header(); ?>
             	endforeach; ?>
 			</div>
 
+			</div><!-- .homepage-content-container -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php echo do_shortcode('[jr_instagram id="2"]'); ?>
+<div class="instagram-container">
+	<h2>Instagram</h2>
+	<?php echo do_shortcode('[instagram-feed]'); ?>
+</div>
 <?php get_footer(); ?>
