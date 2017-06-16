@@ -9,7 +9,7 @@
 function lf_lifestyle_post() {
 
 	$labels = array(
-		'name'                  => 'Lifestyle Posts',
+		'name'                  => 'Lifestyle',
 		'singular_name'         => 'Lifestyle Post',
 		'menu_name'             => 'Lifestyle Posts',
 		'name_admin_bar'        => 'Lifestyle Posts',
@@ -66,7 +66,7 @@ add_action( 'init', 'lf_lifestyle_post', 0 );
 function lf_travel_post() {
 
 	$labels = array(
-		'name'                  => 'Travel Posts',
+		'name'                  => 'Travel',
 		'singular_name'         => 'Travel Post',
 		'menu_name'             => 'Travel Posts',
 		'name_admin_bar'        => 'Travel Posts',
@@ -123,7 +123,7 @@ add_action( 'init', 'lf_travel_post', 0 );
 function lf_advice_post() {
 
 	$labels = array(
-		'name'                  => 'Advice Posts',
+		'name'                  => 'Advice',
 		'singular_name'         => 'Advice Post',
 		'menu_name'             => 'Advice Posts',
 		'name_admin_bar'        => 'Advice Posts',

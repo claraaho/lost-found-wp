@@ -11,7 +11,15 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="hero-banner">
-				<h2>Lost x Found</h2>
+				<div class="hero-title-p1">
+					<h2>Lost</h2>
+				</div>
+				<div class="hero-title-p2">
+					<h2>X</h2>
+				</div>
+				<div class="hero-title-p3">
+					<h2>Found</h2>
+				</div>
 				<h3>with KatexCee</h3>
 			</div>
 
@@ -65,6 +73,12 @@ get_header(); ?>
 					echo '<a href="' . get_permalink($entry["ID"]) . '" title="Look '.esc_attr($entry["post_title"]).'" >' .   $entry["post_title"].'</a>';
             	endforeach; ?>
 			</div>
+
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+
+			<?php endwhile; // End of the loop. ?>
 
 			</div><!-- .homepage-content-container -->
 

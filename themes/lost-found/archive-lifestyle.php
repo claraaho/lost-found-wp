@@ -9,35 +9,29 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
+			<div class="hero-banner">
+				<h2>Lost x Found</h2>
+				<h3>with KatexCee</h3>
+			</div>
 
 			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+                <h1 class="page-title">Browsing Category: <?php
+				the_archive_title( '<span class="post-type-category">', '</span>' );
+				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?></h1>
+			</header>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+			<div class="archive-content-container">
+				<?php if ( have_posts() ) : ?>
+					<?php echo do_shortcode('[ajax_load_more id="5642903314" container_type="div" css_classes="newest-post-container" post_type="lifestyle" posts_per_page="3" scroll="false" button_label="Load More"]'); ?>
+				<?php endif; ?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<div class="instagram-container">
+	<h2>Instagram</h2>
+	<?php echo do_shortcode('[instagram-feed]'); ?>
+</div>
 <?php get_footer(); ?>

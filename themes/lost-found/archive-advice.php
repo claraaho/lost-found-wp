@@ -23,15 +23,12 @@ get_header(); ?>
 
 			<div class="archive-content-container">
 				<?php if ( have_posts() ) : ?>
-					<?php echo do_shortcode('[ajax_load_more id="5642903314" container_type="div" css_classes="newest-post-container" post_type="travel" posts_per_page="3" scroll="false" button_label="Load More"]'); ?>
+					<?php echo do_shortcode('[ajax_load_more id="5642903314" container_type="div" css_classes="newest-post-container" post_type="lifestyle" posts_per_page="3" scroll="false" button_label="Load More"]'); ?>
 				<?php endif; ?>
 			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<div class="instagram-container">
-	<h2>Instagram</h2>
-	<?php echo do_shortcode('[instagram-feed]'); ?>
-</div>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

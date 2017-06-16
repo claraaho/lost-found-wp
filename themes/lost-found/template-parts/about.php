@@ -14,15 +14,17 @@ get_header(); ?>
 				<h3>with KatexCee</h3>
 			</div>
 
+			<div class="about-content-container">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="about-picture">
 					<?php the_post_thumbnail('full'); ?>
 				</div>
 				
-				<div class="about-content">
+				<!--<div class="about-content">-->
 					<?php the_content(); ?>
-				</div>
+				<!--</div>-->
 			<?php endwhile; // End of the loop. ?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

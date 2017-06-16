@@ -20,7 +20,8 @@ get_header(); ?>
 				<div class="blog-article-wrapper">  
 					<?php the_post_thumbnail('full'); ?>
 					<div class="blog-article-content">
-                        <h2><?php the_title(); ?></h2>  
+                        <h2><?php the_title(); ?></h2> 
+						<?php the_date(); ?> 
 						<?php the_content(); ?>
 					</div>
 				</div>
