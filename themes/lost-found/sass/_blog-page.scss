@@ -1,0 +1,74 @@
+.blog-lifestyle-container, .blog-advice-container, .blog-travel-container {
+    margin-bottom: 5rem;
+    p {
+        padding: 1.5rem;
+        margin: 0;
+        border: 1px solid #d3d3d3;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.blog-lifestyle-thumbnail-wrapper, .blog-advice-thumbnail-wrapper, .blog-travel-thumbnail-wrapper {
+    position: relative;
+    text-align: center;
+    img {
+        width: 100%;
+        height: 270px;
+        filter: brightness(85%);
+        object-fit: cover;
+        vertical-align: bottom;
+        @include media($tablet) {
+            height: 470px;
+        }
+    }
+    h2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 45%;
+        margin: 0;
+        color: white;
+        text-shadow: 2px 2px 3px hsla(0,0%,39%,.8);
+        text-transform: uppercase;
+    }
+}
+
+@include media($desktop) {
+    .blog-page-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 650px;
+    }
+    .blog-page-left-container {
+        width: 56%;
+    }
+    .blog-lifestyle-container {
+        margin: 0;
+        p {
+            height: 179px;
+            padding: 3rem 1.5rem;
+        }
+    }
+    .blog-page-right-container {
+        width: 40%;
+        height: 649px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .blog-advice-container, .blog-travel-container {
+        margin: 0;
+        p {
+            height: 125px;
+            padding: 0.5rem;;
+        }
+    }
+    .blog-advice-thumbnail-wrapper img, .blog-travel-thumbnail-wrapper img {
+        height: 185px;
+    }
+}
+

@@ -15,7 +15,7 @@ get_header(); ?>
 			</div>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-            <div class="blog-content-container">
+            <div class="single-blog-content-container">
 			<div class="blog-article-container">
 				<div class="blog-article-wrapper">  
 					<?php the_post_thumbnail('full'); ?>
