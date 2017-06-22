@@ -1,0 +1,17 @@
+.error-404 {
+	text-align: center;
+	height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .page-title {
+        font-size: 7rem;
+        margin: 0;
+    }
+    .page-content {
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+}

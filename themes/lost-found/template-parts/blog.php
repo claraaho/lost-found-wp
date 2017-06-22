@@ -27,7 +27,7 @@ get_header(); ?>
                                     <?php the_post_thumbnail('full'); ?>
                                     <h2>Lifestyle</h2>
                                 </div>
-                                <p><?php echo wp_trim_words(get_the_content(), 30, '... <a href="'. get_permalink() . '"> Read More</a>'); ?></p>
+                                <p><?php echo wp_trim_words(get_the_content(), 30, '... <a href="'. get_permalink() . '" target="_blank"> Read More</a>'); ?></p>
                             <?php endwhile; ?>
                         </div>
 
@@ -43,7 +43,7 @@ get_header(); ?>
                                     <?php the_post_thumbnail('full'); ?>
                                     <h2>Advice</h2>
                                 </div>
-                                <p><?php echo wp_trim_words(get_the_content(), 30, '... <a href="'. get_permalink() . '">Read More</a>'); ?></p>
+                                <p><?php echo wp_trim_words(get_the_content(), 30, '... <a href="'. get_permalink() . '"  target="_blank">Read More</a>'); ?></p>
                             <?php endwhile; ?>
                         </div>
 
@@ -55,7 +55,7 @@ get_header(); ?>
                                     <?php the_post_thumbnail('full'); ?>
                                     <h2>Travel</h2>
                                 </div>
-                                <p><?php echo wp_trim_words(get_the_content(), 30, '... <a href="'. get_permalink() . '"> Read More</a>'); ?></p>
+                                <p><?php echo wp_trim_words(get_the_content(), 30, '... <a href="'. get_permalink() . '"  target="_blank"> Read More</a>'); ?></p>
                             <?php endwhile; ?>
                         </div>
                         

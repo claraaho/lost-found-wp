@@ -828,6 +828,16 @@ a {
   font-style: normal;
   font-weight: 700; }
 
+.comment-list, .comment-list ul {
+  list-style: none; }
+
+.comment-list {
+  margin: 0;
+  padding: 0; }
+  @media only screen and (min-width: 600px) {
+    .comment-list {
+      margin: 0 0 1.5rem 3rem; } }
+
 .archive-post-wrapper {
   position: relative;
   margin-bottom: 3rem; }
@@ -889,6 +899,23 @@ a {
   .ajax-load-button:active, .ajax-load-button:focus {
     box-shadow: none;
     border-color: #248a83; }
+
+.error-404 {
+  text-align: center;
+  height: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .error-404 .page-title {
+    font-size: 7rem;
+    margin: 0; }
+  .error-404 .page-content {
+    margin: 0; }
+  .error-404 p {
+    margin: 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1007,13 +1034,13 @@ a {
     .content-area {
       margin-bottom: 5rem; } }
 
-.homepage-content-container, .blog-page-content-container, .single-blog-content-container, .archive-content-container, .about-content-container, .comments-area {
+.homepage-content-container, .blog-page-content-container, .single-blog-content-container, .archive-content-container, .about-content-container, .contact-content-container, .comments-area {
   padding: 0 2rem; }
   @media only screen and (min-width: 600px) {
-    .homepage-content-container, .blog-page-content-container, .single-blog-content-container, .archive-content-container, .about-content-container, .comments-area {
+    .homepage-content-container, .blog-page-content-container, .single-blog-content-container, .archive-content-container, .about-content-container, .contact-content-container, .comments-area {
       padding: 0 3rem; } }
   @media only screen and (min-width: 1024px) {
-    .homepage-content-container, .blog-page-content-container, .single-blog-content-container, .archive-content-container, .about-content-container, .comments-area {
+    .homepage-content-container, .blog-page-content-container, .single-blog-content-container, .archive-content-container, .about-content-container, .contact-content-container, .comments-area {
       padding: 0 5rem; } }
 
 @media only screen and (min-width: 1024px) {

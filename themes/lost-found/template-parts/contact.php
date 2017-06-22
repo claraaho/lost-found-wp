@@ -1,6 +1,6 @@
 <?php
 /**
-    * Template Name: About Page
+    * Template Name: Contact Page
     *
     * @package Lost + Found
     */
@@ -14,13 +14,10 @@ get_header(); ?>
 				<h3>with KatexCee</h3>
 			</div>
 
-			<div class="about-content-container">
+			<div class="contact-content-container">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="about-picture">
-					<?php the_post_thumbnail('full'); ?>
-				</div>
 				
-				<div class="about-content">
+				<div class="contact-content">
 					<?php the_content(); ?>
 				</div>
 			<?php endwhile; // End of the loop. ?>
